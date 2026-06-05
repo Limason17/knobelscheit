@@ -49,7 +49,7 @@ Deno.test("Geflippte Zahlen anzeigen", () => {
 
 Deno.test("Summe der ausgewählten Zahlen berechnen", () => {
 
-    //Assert
+    //Arrange
     const board = new Board();
 
     //Act
@@ -61,7 +61,7 @@ Deno.test("Summe der ausgewählten Zahlen berechnen", () => {
 
 Deno.test("Zahlen bei passender Summe flippen", () => {
     
-    //Assert
+    //Arrange
     const board = new Board();
 
     //Act
@@ -94,4 +94,16 @@ Deno.test("Spiel ist am Anfang nicht fertig", () => {
 
     //Assert
     assertEquals(result, false);
+})
+
+Deno.test("Spiel ist fertig wenn alle Zahlen geflippt sind", () => {
+
+    //Arrange
+    const board = new Board();
+
+    //Act
+    board.flipNumber([1,2,3,4,5,6,7,8,9]);
+
+    //Assert
+    assertEquals(board.isFinished(), true);
 })
