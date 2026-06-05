@@ -19,4 +19,9 @@ export class Board {
             }
         }
     }
+
+
+    getFlippedNumbers(): number[]{
+        return this.flippedNumbers;
+    }
 }

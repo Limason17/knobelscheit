@@ -35,3 +35,14 @@ Deno.test("Falsche Zahl flippen", () => {
     assertEquals(board.getAvailableNumbers(), [1, 2, 4, 5, 6, 7, 8, 9])
 
 })
+
+Deno.test("Geflippte Zahlen anzeigen", () => {
+    //Arrange
+    const board = new Board();
+
+    //Act
+    board.flipNumber([3])
+
+    //Assert
+    assertEquals(board.getFlippedNumbers(), [3]);
+})
