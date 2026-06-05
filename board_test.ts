@@ -71,3 +71,15 @@ Deno.test("Zahlen bei passender Summe flippen", () => {
     assertEquals(board.getAvailableNumbers(), [1,2,5,6,7,8,9]);
 
 })
+
+Deno.test("Zahlen bei falscher Summe nicht flippen", () => {
+
+    //Assert
+    const board = new Board();
+
+    //Act
+    board.flipNumbersIfSumMatches([3, 4], 8)
+
+    //Assert
+    assertEquals(board.getAvailableNumbers(), [1,2,3,4,5,6,7,8,9]);
+})
