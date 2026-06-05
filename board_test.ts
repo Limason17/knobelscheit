@@ -74,7 +74,7 @@ Deno.test("Zahlen bei passender Summe flippen", () => {
 
 Deno.test("Zahlen bei falscher Summe nicht flippen", () => {
 
-    //Assert
+    //Arrange
     const board = new Board();
 
     //Act
@@ -82,4 +82,16 @@ Deno.test("Zahlen bei falscher Summe nicht flippen", () => {
 
     //Assert
     assertEquals(board.getAvailableNumbers(), [1,2,3,4,5,6,7,8,9]);
+})
+
+Deno.test("Spiel ist am Anfang nicht fertig", () => {
+
+    //Arrange
+    const board = new Board();
+
+    //Act
+    const result = board.isFinished();
+
+    //Assert
+    assertEquals(result, false);
 })

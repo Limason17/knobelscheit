@@ -42,4 +42,8 @@ export class Board {
             this.flipNumber(numbers)
         }
     }
+
+    isFinished(): boolean{
+        return this.availableNumbers.length == 0;
+    }
 }
