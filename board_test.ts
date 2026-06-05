@@ -46,3 +46,15 @@ Deno.test("Geflippte Zahlen anzeigen", () => {
     //Assert
     assertEquals(board.getFlippedNumbers(), [3]);
 })
+
+Deno.test("Summe der ausgewählten Zahlen berechnen", () => {
+
+    //Assert
+    const board = new Board();
+
+    //Act
+    const result = board.sumNumbers([3, 4]);
+
+    //Assert
+    assertEquals(result, 7);
+})
