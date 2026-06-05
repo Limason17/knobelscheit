@@ -58,3 +58,16 @@ Deno.test("Summe der ausgewählten Zahlen berechnen", () => {
     //Assert
     assertEquals(result, 7);
 })
+
+Deno.test("Zahlen bei passender Summe flippen", () => {
+    
+    //Assert
+    const board = new Board();
+
+    //Act
+    board.flipNumbersIfSumMatches([3, 4], 7);
+
+    //Assert
+    assertEquals(board.getAvailableNumbers(), [1,2,5,6,7,8,9]);
+
+})

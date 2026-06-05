@@ -34,4 +34,12 @@ export class Board {
 
         return sum;
     }
+
+    flipNumbersIfSumMatches(numbers: number[], diceSum: number): void{
+        const selectedSum = this.sumNumbers(numbers);
+
+        if(selectedSum == diceSum){
+            this.flipNumber(numbers)
+        }
+    }
 }
